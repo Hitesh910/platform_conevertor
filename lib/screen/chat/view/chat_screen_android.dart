@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:platform_conevertor/componet/view/internet_widget.dart';
 import 'package:provider/provider.dart';
 
 import '../../home/provider/home_provider.dart';
@@ -23,10 +24,11 @@ class _ChatScreenAndroidState extends State<ChatScreenAndroid> {
     return Scaffold(
       key: scaffoldKey,
       body:
-      Center(
-        child: Column(
+       Center(
+         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Center(child: InternetWidget())
             ElevatedButton(
                 onPressed: () {
                   scaffoldKey.currentState!.showBottomSheet(
@@ -89,8 +91,8 @@ class _ChatScreenAndroidState extends State<ChatScreenAndroid> {
             CircularProgressIndicator.adaptive(),
             Icon(Icons.adaptive.arrow_back_rounded)
           ],
-        ),
-      ),
+               ),
+       ),
     );
   }
 
